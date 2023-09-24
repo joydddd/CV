@@ -1,0 +1,124 @@
+%-------------------------
+% Resume in Latex
+% Author : Gabriel Sison
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Random Stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+% \usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-1.2in}
+\addtolength{\evensidemargin}{-1.2in}
+\addtolength{\textwidth}{2.4in}
+\addtolength{\topmargin}{-1.2in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\resumeItem}[1]{
+  \item[-]
+  \small{{#1 \vspace{-3pt}}} \\
+}
+\newcommand{\eduItem}[1]{
+  \item[]\small{
+    {#1 \vspace{-3pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubheadingContinue}[2]{
+  \vspace{-3pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumePaperHeading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{p{.8\textwidth}@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{#3} & \textit{\small #4}
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{0pt}}
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-0.9\textwidth-\leftmargin\relax]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+
+
+\newcommand{\AwardItem}[2]{
+    \vspace*{-7pt}\item
+    \hspace*{2em}
+    \begin{tabular*}{0.6\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\small#1} & {\small #2} \\
+    \end{tabular*}\vspace{-3pt}
+}
+
+
+
+\begin{document}
+\input{Sections/coverletter.tex}
+\input{Sections/header}
+\input{Sections/education}
+\input{Sections/publication}
+\input{Sections/experience}
+\input{Sections/teaching}
+\input{Sections/service}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Technical Skills  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Technical Skills}
+
+    \vspace{-7pt}
+    \begin{itemize}
+    [leftmargin=0.15in, label={}]\small{\item{
+        % LANGUAGES
+        \textbf{Languages}{: STUFF} \\
+        % TOOLS
+        \textbf{Developer Tools}{: STUFF} \\
+        % TECHNOLOGIES
+        \textbf{Technologies/Frameworks}{: STUFF} \\}}
+    \end{itemize}
+ 
+\end{document}
