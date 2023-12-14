@@ -1,18 +1,19 @@
-I'm a 2nd year Ph.D. student at the University of Michigan (advised by Prof. Satish Narayanasamy), working on confidential computing and trusted hardware, with a strong background in GPU architecture, memory systems and Out-of-Order CPU architecture. I'm looking for a research internship position during the summer of 2024. \par
+I'm a 2nd year Ph.D. student at the University of Michigan (advised by Prof. Satish Narayanasamy), working on confidential computing and trusted hardware, with a strong background in GPU architecture, memory systems and Out-of-Order CPU architecture. I'm looking for a research or engineering internship position during the summer of 2024. \par
 My research seeks to advance confidential computing solutions for enabling privacy-preserving data analytics solutions ranging from population-scale genomic analysis to generative AI.  My approach is to develop trustworthy hardware, and use it to efficiently guarantee privacy from the rest of system components, including the operating system and system administrators. \par
 
 \vspace{3ex}
 
 I have made three specific contributions. One, I have helped build SECRET-GWAS, a privacy-preserving genome-wide association study platform on Microsoft Azure's confidential computing platform. SECRET-GWAS scales to over 1000 cores. We showed for the first time that we can perform regression analysis on large genomic datasets from multiple institutions in less than a few seconds, without revealing data to even the cloud service provider (under submission to Nature Methods). \par
 
-Two, I invented the Version Vault. Today, trusted processors (Intel SGX) support only a few hundred MBs of secure memory space. Version Vault (VV) is an innovative solution that expands trust to intelligent memory and scales secure memory space to tens of TeraBytes, which is a million times larger than what is feasible today (under preparation to ISCA 2024).\\
+Two, I invented the Toleo. Today, trusted processors (Intel SGX) support only a few hundred MBs of secure memory space. The Toleo is an innovative solution that expands trust to intelligent memory and scales secure memory space to tens of TeraBytes, which is a million times larger than what is feasible today (submitted to ASPLOS 2024).\\
 
 In addition to these thesis work, in collaboration with AMD, I have also built a GPU accelerated long-read genome sequencing software artifact (minimap2). It will soon be released as part of AMD Research Open-source Project. \\
 
 My internship with NVIDIA gpu architecture team on deep learning performance analysis and ubenchmarking on the Hopper generation equips me well with GPU architecture knowledge, especially with the GPU memory system. I worked on utilizing Hopper features such as TMA and cluster xbar to improve the NCCL library. \\
 
 \vspace{3ex}
-Going forward, I plan to advance confidential computing to address privacy and safety concerns of generative AI. Recent release of NVidia's Hopper confidential computing feature brings GPUs into the trusted hardware family, and provides an opportunity to impact how ML models are trained and used. Current solution for GPU TEE heavily relies on software drivers that disallow important optimizations for CPU/GPU communication. I will seek solutions that integrate GPU and CPU into a unified TEE through low-level hardware primitives (such as through CXL-IDE feature (Integrity Data Encryption)) to allow finer granularity on data movement in order to construct a unified trusted CPU-GPU memory. I'm also open to explore other problems in integrating GPUs into the TEE system. \\
+Going forward, I plan to advance confidential computing to address privacy and safety concerns of generative AI. I'm also looking into providing safe storage against ransomware attacks through trusted hardware. 
+% Recent release of NVidia's Hopper confidential computing feature brings GPUs into the trusted hardware family, and provides an opportunity to impact how ML models are trained and used. Current solution for GPU TEE heavily relies on software drivers that disallow important optimizations for CPU/GPU communication. I will seek solutions that integrate GPU and CPU into a unified TEE through low-level hardware primitives (such as through CXL-IDE feature (Integrity Data Encryption)) to allow finer granularity on data movement in order to construct a unified trusted CPU-GPU memory. I'm also open to explore other problems in integrating GPUs into the TEE system. \\
 
 \vspace{3ex}
 
