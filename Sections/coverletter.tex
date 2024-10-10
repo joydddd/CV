@@ -1,25 +1,26 @@
-I'm a \textbf{Ph.D. candidate at the University of Michigan} (advised by Prof. Satish Narayanasamy), working on confidential computing and trusted hardware, with a strong background in GPU architecture and ML systems. I'm looking for a research or engineering internship position during the summer of 2024. \par
-My research seeks to advance confidential computing solutions for enabling privacy-preserving data analytics solutions ranging from population-scale genomic analysis to generative AI. My approach is to develop trustworthy hardware, and use it to efficiently guarantee privacy from the rest of system components, including the operating system and system administrators. \par
+I'm a Ph.D. candidate at the University of Michigan, advised by Prof. Satish Narayanasamy, working on confidential computing and trusted hardware, with a strong background in GPU architecture and ML systems. \textbf{I'm seeking a research internship position for the spring or summer of 2025. }\par
+My research seeks to advance confidential computing solutions for enabling privacy-preserving data analytics solutions ranging from population-scale genomic analysis to generative AI. My approach involves developing trustworthy hardware to efficiently guarantee privacy across system components, excluding the operating system and system administrators from the trust base. \par
 
 \vspace{3ex}
 
-I have made four specific contributions. First, I invented the \textbf{Toleo}. Today, trusted processors (Intel SGX) support only a few hundred MBs of secure memory space. Toleo is an innovative solution that expands trust to intelligent memory and scales secure memory space to tens of TeraBytes, which is a million times larger than what is feasible today (ASPLOS'24).\par
+I have made four key contributions. First, I invented the \textbf{Toleo}. Today, trusted processors (Intel SGX) support only a few hundred MBs of secure memory space. Toleo is an innovative solution that expands trust to intelligent memory and scales secure memory space to tens of TeraBytes, which is a million times larger than what is feasible today (ASPLOS'24).\par
 
 
-Secondly, in collaboration with Meta, I built FlexDecoding, the inference backend for \textbf{FlexAttention}. FlexDecoding addresses the lack of flexibility in supporting new attention variants in today's LLM infrastructure and combines the flexibility of the PyTorch compiler with the performance of expert-tuned decoding kernels. FlexAttention (with only training backend) was launched in August 2024 with 170k views on X. FlexDecoding is set to launch in October 2024.\par
+Secondly, in collaboration with Meta, I built FlexDecoding, the inference backend for \textbf{FlexAttention}. FlexDecoding addresses the lack of flexibility in supporting new attention variants in today's LLM infrastructure and combines the flexibility of the PyTorch compiler with the performance of expert-tuned decoding kernels. FlexAttention (initially launched with only the training backend in Aug 2024) received 170k views on X. FlexDecoding is set to launch in Oct 2024. \par
 
 
-Thirdly, I have helped build \textbf{SECRET-GWAS}, a privacy-preserving genome-wide association study platform on Microsoft Azure's confidential computing platform.  SECRET-GWAS scales to over 1000 cores. We showed for the first time that we can perform regression analysis on large genomic datasets from multiple institutions in less than a few seconds, without revealing data to even the cloud service provider (under review for Nature Computational Science).\par
+Thirdly, I contributed to the development of \textbf{SECRET-GWAS}, a privacy-preserving genome-wide association study platform built on Microsoft Azure's confidential computing platform.  SECRET-GWAS scales to over 1000 cores and we demonstrated for the first time that regression analysis on large genomic datasets from multiple institutions can be performed in a few seconds, without exposing data to cloud service provider (under review for Nature Computational Science).\par
 
-In addition to these thesis work, in collaboration with AMD, I have also developed new techniques to accelerate long-read genome sequencing (mm2-gb). It will soon be released as part of AMD Research Open-source Project and is accepted to ACM BCB'24. \par
+Lastly, in collaboration with AMD, I developed new techniques to accelerate long-read genome sequencing (\textbf{mm2-gb}, published in ACM BCB'24). mm2-gb advances computing for genome mapping and alignment, removing computational bottlenecks in the sequencing pipeline to keep up with the ultra-long read trend. Our artifact has gained significant community attention and will soon be released as part of AMD Research Open-source Project. \par
 
-
-\vspace{3ex}
-Going forward, I plan to advance confidential computing to address privacy and safety concerns of generative AI. I'm also looking into providing safe storage against ransomware attacks through trusted hardware. \par
-Recent release of NVidia's Hopper confidential computing feature brings GPUs into the trusted hardware family, and provides an opportunity to impact how ML models are trained and used. Current solution for GPU TEE heavily relies on software drivers that disallow important optimizations for CPU/GPU communication. I will seek solutions that integrate GPU and CPU into a unified TEE through low-level hardware primitives (such as through CXL-IDE feature (Integrity Data Encryption)) to allow finer granularity on data movement in order to construct a unified trusted CPU-GPU memory. I'm also open to explore other problems in integrating GPUs into the TEE system. \\
+Additionally, I am contributing to \textbf{Timelocked Storage}, a project aimed at minimizing the Trusted Code Base (TCB) for ransomeware defense and excluding human administrators, operating systems, even the main processor from the TCB. \par
 
 \vspace{3ex}
+Looking ahead, I plan to further advance confidential computing to address privacy and safety concerns of generative AI.  \par
+The release of NVidia's Hopper confidential computing feature brings GPUs into the trusted hardware family, and offers an exciting opportunity to impact how ML models are trained and used. Current GPU TEE solutions heavily relies on software drivers and limits key optimizations, such as DMA for CPU/GPU communication. I aim to explore solutions that integrate GPU and CPU into a unified TEE, leveragin finer granularity on data movement based by low-level hardware primitives (such as through CXL-IDE feature (Integrity Data Encryption)) to construct a unified trusted CPU-GPU memory. I'm also open to exploring other challenges related to integrating GPUs into the TEE system. \\
 
-Please see next page for my CV and detailed background. \\
+\vspace{3ex}
+
+Please see the next page for my CV and detailed background. \\
 \paragraph*{}
 \begin{flushright} -- Joy\end{flushright}
