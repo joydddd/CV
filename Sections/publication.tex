@@ -15,7 +15,7 @@
     
         % Project 2
         \resumePaperHeading
-        {mm2-gb: GPUA ccelerated Minimap2 for Long Read DNA Mapping} % Title
+        {mm2-gb: GPU Accelerated Minimap2 for Long Read DNA Mapping} % Title
         {ACM BCB'24} % Conference
         {\underline{J. Dong}, X. Liu, H. Sadasivan, S. Sitaraman, S. Narayanasamy} % Authors
         {Accepted} % Status
@@ -35,6 +35,36 @@
         \resumeItem{Develop a thousand-core platform on Azure Confidential Computing to conduct multi-institutional GWAS on millions of patients in less than a minute.}
         \resumeItem{Adapt Spark-based Hail genomic analysis framework to run on TEE under obliviousness requirement.}
         \resumeItem{Parallelize GWAS computation on 1k cores to achieve near linear speedup.}
+        \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+
+\section{PROJECTS IN PROGRESS} 
+    \resumeSubHeadingListStart
+        % Project 1
+        \resumePaperHeading
+        {FlexAttention: Flexibility of PyTorch with the Performance of FlashAttn} % Title
+        {\textit{\underline{\href{https://pytorch.org/blog/flexattention/}{PyTorch Blog}}}} % Conference
+        {\underline{Joy Dong}, Driss Guessous, Yanbo Liang, Boyuan Feng, Horace He} % Authors
+        {} % Status
+        \resumeItemListStart
+        \resumeItem{Flexible: An API that allows implementing many attention variants in a few lines of idiomatic PyTorch code.}
+        \resumeItem{Performant: Provides 1.1x - 1.3x speedup compared to FlashAttn2 by lowering customizable attention into a fast Triton kernel + taking advantage of sparsity. }
+        \resumeItem{Self Adaptive: optimized to efficiently support decoding, GQA and PagedAttention. }
+        % \resumeItem{Design, implement, optimize and benchmark for decoding \& GQA.}
+        \resumeItemListEnd
+    
+        % Project 2
+        \resumePaperHeading
+        {Timelocked Storage for Ransomware Defense} % Title
+        {} % Conference
+        {J. Rosenblum, \underline{J. Dong}, S. Narayanasamy} % Authors
+        {} % Status
+        \resumeItemListStart
+        \resumeItem{Shrink the Trusted Code Base (TCB) for randomware defense to a formally verified timelock gate-keeper in front of disks.}
+        \resumeItem{Compatible with different flavors of versioning file system designs. }
+        \resumeItem{Achieve near zero disk access overhead.}
         \resumeItemListEnd
         
     \resumeSubHeadingListEnd
