@@ -41,7 +41,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-7pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
@@ -55,6 +55,13 @@
     {#1 \vspace{-3pt}}
   }
 }
+
+\newcommand{\pubItem}[1]{
+  \item \small{
+    {#1 \vspace{-3pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-3pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -82,6 +89,8 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-0.9\textwidth-\leftmargin\relax]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumePubListStart}{\begin{enumerate}[leftmargin=0.0in, label={}]}
+\newcommand{\resumePubListEnd}{\end{enumerate}\vspace{-12pt}}
 
 
 
