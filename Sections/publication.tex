@@ -19,6 +19,16 @@
         \resumeItem{Develop adaptive GPU scheduling algorithm to balance highly heterogeneous workload.}
         \resumeItemListEnd
 
+
+        \pubItem
+        {\textbf{Juechu Dong*}, Boyuan Feng*, Driss Guessous*, Yanbo Liang*, Horace He. \textit{Flex Attention: A Programming Model for Generating Optimized Attention Kernels.} In Proceedings of Machine Learning and Systems 7. 2025. }{MLSys '25} % Title
+        \resumeItemListStart
+        \resumeItem{Develop a novel compiler-driven programming model that allows implementing the majority of attention variants in a few lines of idiomatic PyTorch code.}
+        \resumeItem{Optimize customizable attention kernels to provides 1.1x - 1.3x speedup compared to FlashAttn2 by lowering customizable attention into a fast Triton kernel + taking advantage of sparsity. }
+        \resumeItem{Adapt FlexAttention to efficiently support decoding, GQA and PagedAttention. }
+        % \resumeItem{Design, implement, optimize and benchmark for decoding \& GQA.}
+        \resumeItemListEnd
+
     \resumePubListEnd
     \footnotetext[1]{ACM-BCB is the flagship conference of the ACM SIGBio}
 
@@ -36,27 +46,15 @@
         \resumeItem{Adapt Spark-based Hail genomic analysis framework to run on TEE under obliviousness requirement.}
         \resumeItem{Parallelize GWAS computation on 1k cores to achieve near linear speedup.}
         \resumeItemListEnd
-        \newpage
         
         % Project 1
-        \resumePaperHeading
-        {Flex Attention: A Programming Model for Generating Optimized Attention Kernels} % Title
-        {MLSys '25} % Conference
-        {\underline{Juechu Dong}*, Boyuan Feng*, Driss Guessous*, Yanbo Liang*, Horace He*} % Authors
-        {under review} % Status
-        \resumeItemListStart
-        \resumeItem{Develop a novel compiler-driven programming model that allows implementing the majority of attention variants in a few lines of idiomatic PyTorch code.}
-        \resumeItem{Optimize customizable attention kernels to provides 1.1x - 1.3x speedup compared to FlashAttn2 by lowering customizable attention into a fast Triton kernel + taking advantage of sparsity. }
-        \resumeItem{Adapt FlexAttention to efficiently support decoding, GQA and PagedAttention. }
-        % \resumeItem{Design, implement, optimize and benchmark for decoding \& GQA.}
-        \resumeItemListEnd
     
         % Project 2
         \resumePaperHeading
         {Timelocked Storage for Ransomware Defense} % Title
-        {ASPLOS '25} % Conference
+        {} % Conference
         {J. Rosenblum, \underline{J. Dong}, S. Narayanasamy} % Authors
-        {under review} % Status
+        {under submission} % Status
         \resumeItemListStart
         \resumeItem{Propose a new randomeware defence mechanism that adds a strong layer of protection on top of conventional user creditial based security via a trusted storage system. }
         \resumeItem{Design simple yet efficient interface between the disk and the operating system to provide safe rollback. }
