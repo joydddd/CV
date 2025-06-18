@@ -1,0 +1,293 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage{makecell}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.75in, top=0.75in, right=0.75in, bottom=0.75in}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule]
+
+
+\input{common}
+
+%%%%%%%%%%%%%%%% SubHeadingList
+\newcommand{\SubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\SubHeadingListEnd}{\end{itemize}}
+\newcommand{\SubHeading}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large #1} & \textit{ #2} \\
+
+        \if\relax\detokenize{#3}\relax%
+            \if\relax\detokenize{#3}\relax%
+              % do nothing 
+            \else%
+                \textit{#3} & \textit{ #4} \\
+            \fi%
+        \else
+            \textit{#3} & \textit{ #4} \\
+        \fi
+      
+    \end{tabular*}\vspace{-2mm}
+}
+\let\SubHeadingCV\SubHeading
+\newcommand{\resumeSubHeading}[4]{}
+
+
+\newcommand{\SubHeadingProject}[4]{
+\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {\large{\textbf{#1}}} & \textit{\footnotesize{#2}} \\
+        \if\relax\detokenize{#3}\relax%
+            \if\relax\detokenize{#3}\relax%
+              % do nothing 
+            \else%
+                {\textit{#3}} & {}[\href{#4}{\textcolor{darkblue}{\faGithub}}] \\
+            \fi%
+        \else
+            {\textit{#3}} & {}[\href{#4}{\textcolor{darkblue}{\faGithub}}] \\
+        \fi
+
+        
+        
+    \end{tabular*}
+}
+
+%%%%%%%%%%%%%%%%%%%%% resumeItemList
+\newcommand{\ItemListStart}{\begin{itemize}[rightmargin=\dimexpr\linewidth-0.9\textwidth-\leftmargin\relax]}
+\newcommand{\ItemListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{}
+\newcommand{\resumeItemListEnd}{}
+\newcommand{\resumeItem}[1]{}
+
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Award Specific Commands
+\newcommand{\AwardItem}[4]{
+  \item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {#1} & \textit{\small #2} \\
+      \if\relax\detokenize{#3}\relax%
+      % do nothing 
+      \else%
+        \textit{\small #3} & \\%
+      \fi%
+    \end{tabular*}
+}
+\newcommand{\AwardHeading}[1]{
+    \item \textbf{\large #1}
+}
+\let\AwardItemCV\AwardItem
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%Publication formatting. 
+\newcommand{\PubListStart}[2]{
+    \vspace{0.5mm}
+    {\textbf{\large {#1}}}
+    \vspace{0.5mm}
+    \begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={[#2.\arabic*]}]
+}
+\newcommand{\PubListEnd}{\end{enumerate}\vspace{0.5mm}}
+%%%%\PubItem{Title 1}{Author 2}{Journal/Conf. 3 }{Year 4}{Cmt 5}{DOI 6}
+\newcommand{\PubItem}[6]{
+    \item
+    {#2}. % authors
+    \if\relax\detokenize{#6}\relax %Add doi link if DOI is defined. 
+        {"{#1}"}. %Title
+    \else
+        \href{https://doi.org/#6}{"{#1}"}. %Title
+    \fi
+    In \textit{#3}. % conf / journal
+    {#5} % cmd
+    {#4}. % year
+    \if\relax\detokenize{#6}\relax %Add doi link if DOI is defined. 
+    \else
+        {DOI: {#6}}
+    \fi
+}
+\newcommand{\PubAuthorHighlight}[1]{\underline{\textbf{#1}}}
+\let\PubItemCV\PubItem
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\faOrcid} \myName}}
+
+\begin{document}
+\headerfontiii
+
+\input{Sections/000-header}
+
+% Header
+\begin{center}
+    {\Huge\textbf{\myName}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \href{mailto:\myEmail}{\myEmail} | 
+    \href{https://\myWebsite}{\myWebsite}
+    }
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faLinkedin} \href{\myLinkedIn}{\myLinkedInProfile} | 
+    \socialicon{\faGithub} \href{https://github.com/\myGithub}{\myGithub} |
+    \orcid{\myOrcid} |
+    \socialicon{\aiGoogleScholar} \href{\myGoogleScholar}{\myName}
+    }
+\end{center}
+\vspace{-6mm}
+\begin{center}
+    \small{\myCity}
+\end{center}
+
+\vspace{-4mm}
+\section{\textbf{Bio}}
+\input{Sections/01-summary}
+\section{\textbf{Education}}
+\input{Sections/02-education}
+
+\section{\textbf{Industry Experience}}
+\input{Sections/05-experience}
+
+\section{\textbf{Honors and Awards}}
+\input{Sections/03-honors}
+
+\section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize *=Enqual Contribution}}
+{\small
+\input{Sections/04-publications}
+}
+
+\section{\textbf{Invited Talks \& Guest Lectures}}
+
+{\small
+\input{Sections/07-talks}
+}
+
+\section{\textbf{Projects}}
+{
+\small
+\input{Sections/06-projects}
+}
+
+\section{\textbf{Teaching}}
+{
+\small
+\input{Sections/09-teaching}
+}
+
+
+\section{\textbf{Service}}
+{
+\small
+\input{Sections/08-service}
+}
+
+
+
+
+\section{\textbf{Skills}}
+\input{Sections/10-skills}
+
+
+\end{document}
