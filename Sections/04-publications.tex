@@ -1,0 +1,117 @@
+\PubListStart{Conference Papers}{C}
+
+\PubItem
+{Flex Attention: A Programming Model for Generating Optimized Attention Kernels} %Title
+{\PubAuthorHighlight{Juechu Dong*}, Boyuan Feng*, Driss Guessous*, Yanbo Liang*, Horace He} %Author
+{Proceedings of Machine Learning and Systems 7} % Conference.
+{2025} % Year
+{(MLsys '25)} %cmt
+{} % DOI
+
+\resumeItemListStart
+\resumeItem{Develop a novel compiler-driven programming model that allows implementing the majority of attention variants in a few lines of idiomatic PyTorch code.}
+\resumeItem{Optimize customizable attention kernels to provides 1.1x - 1.3x speedup compared to FlashAttn2 by lowering customizable attention into a fast Triton kernel + taking advantage of sparsity. }
+\resumeItem{Adapt FlexAttention to efficiently support decoding, GQA and PagedAttention. }
+% \resumeItem{Design, implement, optimize and benchmark for decoding \& GQA.}
+\resumeItemListEnd
+
+\PubItem
+{Toleo: Scaling Freshness to Tera-scale Memory Using CXL and PIM} %Title
+{\PubAuthorHighlight{Juechu Dong}, Jonathon Rosenblum, Satish Narayanasamy} %Author
+{Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4} % Conference.
+{2024} % Year
+{(ASPLOS '24)} %cmt
+{10.1145/3622781.3674180} % DOI
+
+\resumeItemListStart
+\resumeItem{Scale trusted memory size from hundreds of MB to tens of TB by expanding the span of trusted from a single trusted processor to an entire platform including intelligent memories. }
+\resumeItem{Design a new scheme of freshness protection that reduces the space requirement by 50x.}
+\resumeItem{Reduce deployment cost by spacing sharing one intelligent memory device among multiple CPUs. }
+\resumeItemListEnd
+
+
+\PubItem
+{mm2-gb: GPU Accelerated Minimap2 for Long Read DNA Mapping} %Title
+{\PubAuthorHighlight{Juechu Dong}*, Xueshen Liu*, Harisankar Sadasivan, Sriranjani Sitaraman, Satish Narayanasamy} %Author
+{Proceedings of the 15th ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics} % Conference.
+{2024} % Year
+{(BCB '24\footnotemark)} %cmt
+{} % DOI
+
+\resumeItemListStart
+\resumeItem{Accelerate computational intensive chaining step in the state-of-art long sequence mapping tool minimap2 using AMD GPU by 2.57-5.33x.}
+\resumeItem{Optimize towards ultra long reads of 100k+ to accommodate genome sequencing technology trend.}
+\resumeItem{Develop adaptive GPU scheduling algorithm to balance highly heterogeneous workload.}
+\resumeItemListEnd
+
+\PubListEnd
+
+\footnotetext[1]{ACM-BCB is the flagship conference of the ACM SIGBio.}
+
+
+\PubListStart{Journal Articles}{J}
+
+\PubItem
+{SECRET-GWAS: Confidential Computing for Population-Scale GWAS} %Title
+{Jonathon Rosenblum, \PubAuthorHighlight{Juechu Dong}, Satish Narayanasamy} %Author
+{Nature Computer Science} % Conference.
+{2025} % Year
+{} %cmt
+{} % DOI
+
+\resumeItemListStart
+\resumeItem{Develop a thousand-core platform on Azure Confidential Computing to conduct multi-institutional GWAS on millions of patients in less than a minute.}
+\resumeItem{Adapt Spark-based Hail genomic analysis framework to run on TEE under obliviousness requirement.}
+\resumeItem{Parallelize GWAS computation on 1k cores to achieve near linear speedup.}
+\resumeItemListEnd
+
+\PubListEnd
+
+
+\PubListStart{WorkShops}{W}
+
+\PubItemCV
+{mm2-gb: GPU Accelerated Minimap2 for Long Read DNA Mapping} %Title
+{\PubAuthorHighlight{Juechu Dong}*, Xueshen Liu*, Harisankar Sadasivan, Sriranjani Sitaraman, Satish Narayanasamy} %Author
+{The 1st Workshop on
+Emerging Computer Systems Challenges and Applications in Biomedicine} % Conference.
+{2024} % Year
+{(BioSys \char`\@ ASPLOS '24)} %cmt
+{} % DOI
+
+\PubListEnd
+
+
+\PubListStart{Technical Reports \& Blogs}{T}
+
+\PubItemCV
+{FlexAttention Part II: FlexAttention for Inference} %Title
+{\PubAuthorHighlight{Joy Dong}, Boyuan Feng, Driss Guessous, Joel Schlosser, Yanbo Liang, Horace He} %Author
+{PyTorch Blogs} % Conference.
+{Apr 2025} % Year
+{} %cmt
+{} % DOI
+
+\PubItemCV
+{FlexAttention: The Flexibility of PyTorch with the Performance of FlashAttention} %Title
+{Team PyTorch: Driss Guessous, Yanbo Liang, \PubAuthorHighlight{Joy Dong}, Horace He} %Author
+{PyTorch Blogs} % Conference.
+{Aug 2024} % Year
+{} %cmt
+{} % DOI
+
+\PubListEnd
+
+
+\PubListStart{Under Submission / Preprints }{PP}
+
+\PubItemCV
+{HelmsDeep: Isolated Time-Based Defense for Storage Systems} %Title
+{Jonathon Rosenblum, \PubAuthorHighlight{Juechu Dong}, Satish Narayanasamy} %Author
+{submission to The 31st Symposium on Operating Systems Principles} % Conference.
+{2025} % Year
+{} %cmt
+{} % DOI
+
+\PubListEnd
+
