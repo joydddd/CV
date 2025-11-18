@@ -2,16 +2,21 @@
 
 \SubHeadingProject{Helion}{2025 – Present}{Python-embedded Domain-Specific Language (DSL) for High-Performance ML Kernels}{https://github.com/pytorch-labs/helion}
 \ItemListStart
-\Item{Design and implement a higher-level DSL enabling efficient ML kernel authoring with minimal hardware expertise.}
-\Item{Enable extensive automatic optimization space search (e.g., cache interleaving, persistence scheduling) for performance gains via concise code.}
-\Item{Automate tensor memory layout management for developers using Python closure-based templating.}
+\Item{Design and extend higher-level DSL for efficient distributed ML kernels authoring.}
+\Item{Investigate into in-kernel communication and computation fusion for GPUs (PyTorch conf poster: Kraken) }
+\Item{Implement cross-device communication/sync abstraction and lowering path in Helion.}
 \ItemListEnd
 
-\SubHeadingProject{GCnC}{2025 - Present}{Decomposing Tiling and Layout from Scheduling in GPU Kernel DSL and Compiler Design}{}
+
+\SubHeadingProject{GCnC}{2025 - present}{GPU Kernel DSL Abstraction Briding Framework}{}
+
 \ItemListStart
-\Item{Design a novel framework for modular GPU kernel authoring.}
-\Item{Decompose tiling and layout design from scheduling for separation of concern between domain experts and tuning experts. }
-\Item{Enable a "mixed level of abstraction" for a low-overhead yet high-performance kernel authoring experience. }
+\Item{Designed abstraction framework bridging domain expertise and low-level GPU optimization in CuTe DSL.}
+\Item{Developed compiler transformation preserving scheduling semantics for high-level kernel customization.}
+\Item{Implement abstraction lifting data flow graph generator for CuTe DSL, enabling visualization \& sync sanitinzation.}
+\Item{\textit{Targetting submission to ASPLOS 2027}}
+
+\ItemListEnd
 
 
 \ItemListEnd
